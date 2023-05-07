@@ -1,0 +1,135 @@
+html{
+    background-color: black;
+}
+
+.container2 {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+    
+
+}
+.container2 .card1 {
+    position: relative;
+}
+.container2 .card1 .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.4s;
+}
+.container2 .card1 .face.front {
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+.container2 .card1:hover .face.front {
+    transform: translateY(0);
+    box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+    0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+}
+.container2 .card1:nth-child(2):hover .face.front {
+    box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px rgb(255, 208, 0),
+    inset -20px 0 80px rgb(255, 196, 0), inset 20px 0 300px rgb(255, 182, 46),
+    inset -20px 0 300px rgb(255, 153, 0), 0 0 50px #0098be,
+    -10px 0 80px rgb(255, 174, 0), 10px 0 80px rgb(0, 162, 255);
+}
+.container2 .card1:nth-child(3):hover .face.front {
+    box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px rgb(63, 41, 16),
+    inset -20px 0 80px rgb(26, 11, 2), inset 20px 0 300px rgb(24, 19, 5),
+    inset -20px 0 300px rgb(53, 27, 13), 0 0 50px #ffca7f,
+    -10px 0 80px rgb(70, 45, 8), 10px 0 80px rgb(51, 40, 32);
+}
+.container2 .card1 .face.front .content {
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    transition: 0.5s;
+    text-align: center;
+}
+.container2 .card1:hover .face.front .content {
+    opacity: 1;
+}
+.container2 .card1 .face.front .content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container2 .card .face.front .content i {
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+}
+.container2 .card1 .face.front .content h3 {
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}
+.container2 .card .face.front .content a {
+    transition: 0.5s;
+}
+.container2 .card1 .face.back {
+    position: relative;
+    background-color: #ffffff;
+    background-image: linear-gradient(160deg, #ffffff 0%, #ffdeff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transform: translateY(-100px);
+}
+.container2 .card1:hover .face.back {
+    transform: translateY(0);
+}
+.container2 .card1 .face.back .content p,
+button {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.container2 .card1 .face.back .content button {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    margin: 15px 0 0;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #333;
+    border-radius: 6px;
+}
+.container2 .card1 .face.back .content button:hover {
+    letter-spacing: 1px;
+}
+
+@media (max-width: 990px){
+    .container2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 680px){
+    .container2 {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+    }
+}
